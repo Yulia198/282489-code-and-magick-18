@@ -181,28 +181,43 @@
   </div>
 </template>
 <script>
-var fireballSize = 22;
-var getFireballSpeed = function(left){
-  if(left) {getFireballSpeed = 5
-  } else {getFireballSpeed = 2
-  };
- // console.log(getFireballSpeed);
 
+var fireballSize = 22;
 var wizardSpeed = 3;
 var wizardWidth = 70;
 
-var wizardHeight = function(){
-return = 1.337 * wizardWidth;
+//Fireball speed
+var getFireballSpeed = function(left){
+  return left ? 5 : 2;
+};
+var getWizardHeight = function(){
+  return 1.337 * wizardWidth
 };
 
 var getWizardX = function(width){
-return (width / 2);
- };
- // Вообще ничегошеньки непонятно! Как по середине?
+  console.log(wizardWidth)
+  return (width - wizardWidth) / 2;
+};
 var getWizardY = function(height){
-return height = 
- };
+   return height / 3 + getWizardHeight()
+};
 
+
+/* Alternative variant:
+function getFireballSpeed(left){
+  return left ? 5 : 2;
+}
+function getWizardHeight(){
+  return 1.337 * wizardWidth
+}
+function getWizardX(width){
+  console.log(wizardWidth)
+  return (width - wizardWidth) / 2;
+}
+function getWizardY(height){
+  return height / 3 + getWizardHeight();
+};*/
+ 
 </script>
 <script src="js/game.js"></script>
 
