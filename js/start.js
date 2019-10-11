@@ -15,9 +15,8 @@ var MESSAGE_START_X_POSITION = 115;
 var MESSAGE_START_Y_POSITION = 45;
 var TIME_START_Y_POSITION = 240;
 var renderCloud = function (ctx, x, y, color, width, height) {
-};
-ctx.fillStyle = color;
-ctx.fillRect(x, y, width, height);
+  ctx.fillStyle = color;
+  ctx.fillRect(x, y, width, height);
 };
 var getMaxElementFromArray = function (arr) {
   var maxElement = arr[0];
